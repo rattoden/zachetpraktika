@@ -1,0 +1,19 @@
+using System;
+class HelloWorld 
+{
+  static void Main() 
+  {
+    string a = Console.ReadLine();
+    int i = 0;
+    while (i < a.Length)
+    {
+        if (a[i] == ' ')
+        {
+            a = a.Remove(i, 1);
+            a = a.Insert(i, "_");
+        }
+        i++;
+    }
+    Console.WriteLine(a);
+  }
+}
