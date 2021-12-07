@@ -1,0 +1,31 @@
+using System;
+class HelloWorld 
+{
+  static void Main() 
+  {
+    int n;
+    n = Convert.ToInt16(Console.ReadLine());
+    int[] matr = new int[n];
+    Random rnd = new Random();
+    for (int i = 0; i < n; i++)
+    {
+        Console.Write("Введите число: ");
+        matr[i] = Convert.ToInt16(Console.ReadLine());
+        
+    }
+    for (int i = 0; i < n; i++)
+    {
+        Console.Write("{0}", matr[i].ToString() + " ");
+    }
+    int max = 0;
+    for (int i = 1; i < n; i++)
+    {
+        if (matr[i] > max)
+        {
+            max = matr[i];
+        }
+    }
+    Console.WriteLine();
+    Console.WriteLine(max);
+  }
+}
